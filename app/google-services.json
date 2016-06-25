@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "239539320224",
+    "firebase_url": "https://project-7957822587339009995.firebaseio.com",
+    "project_id": "project-7957822587339009995",
+    "storage_bucket": "project-7957822587339009995.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:239539320224:android:39d4104e45d6349d",
+        "android_client_info": {
+          "package_name": "com.example.sharkey.foodles"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "239539320224-oet89s5ghho0bhf86jb3au6mlam1ilft.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.sharkey.foodles",
+            "certificate_hash": "20AFFBC8A1453760DD913755E09A7CCF01B07488"
+          }
+        },
+        {
+          "client_id": "239539320224-n3e4td36m2pa8l7lakcgh19l8fakf7bu.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAJK7J5ZVd5YL0hzbvV5uKGjYgiJNxhaJw"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "239539320224-n3e4td36m2pa8l7lakcgh19l8fakf7bu.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
