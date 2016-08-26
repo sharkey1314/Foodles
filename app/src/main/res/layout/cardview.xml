@@ -4,7 +4,7 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/card"
     android:layout_width="150dp"
-    android:layout_height="200dp"
+    android:layout_height="150dp"
     card_view:cardBackgroundColor="@android:color/transparent"
     card_view:cardCornerRadius="4dp"
     card_view:cardElevation="@dimen/cardview_default_elevation"
@@ -35,8 +35,9 @@
             android:hint="Picture"
             android:layout_width="150dp"
             android:layout_height="150dp"
+            android:layout_alignParentBottom="true"/>
+        <!--
             android:layout_alignEnd="@+id/tvDetails"
-            android:layout_alignParentBottom="true"
-            android:layout_below="@+id/tvUserName" />
+            android:layout_below="@+id/tvUserName"-->
         </RelativeLayout>
 </android.support.v7.widget.CardView>

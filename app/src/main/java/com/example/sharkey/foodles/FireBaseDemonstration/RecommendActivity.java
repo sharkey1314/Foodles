@@ -72,6 +72,7 @@ public class RecommendActivity extends AppCompatActivity {
     private StorageReference mStorageRef;
     private DatabaseReference mDatabase;
 
+    private com.example.sharkey.foodles.FireBaseDemonstration.UploadTask uploadTask;
 
     String[] perms = {"android.permission.CAMERA", "android.permission.READ_EXTERNAL_STORAGE",
             "android.permission.WRITE_EXTERNAL_STORAGE"};
@@ -183,7 +184,11 @@ public class RecommendActivity extends AppCompatActivity {
         btUpload.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                uploadFromUri(mCapturedImageURI);
+                uploadTask = new com.example.sharkey.foodles.FireBaseDemonstration.UploadTask();
+                uploadTask.execute(mCapturedImageURI);
+                Intent intent = new Intent(getApplicationContext(), HomeActivity.class);
+                startActivity(intent);
+                // uploadFromUri(mCapturedImageURI);
 
             }
         });
@@ -230,10 +235,9 @@ public class RecommendActivity extends AppCompatActivity {
                         // Get the public download URL
                         mDownloadUrl = taskSnapshot.getMetadata().getDownloadUrl();
                         mDatabase = FirebaseDatabase.getInstance().getReference();
-                        mDatabase.child("pictures").setValue(mDownloadUrl.toString());
 
-                        Intent intent = new Intent(getApplicationContext(), HomeActivity.class);
-                        startActivity(intent);
+                        String key = mDatabase.child("pictures").push().getKey();
+                        mDatabase.child("pictures").child(key).setValue(mDownloadUrl.toString());
                     }
                 })
                 .addOnFailureListener(this, new OnFailureListener() {

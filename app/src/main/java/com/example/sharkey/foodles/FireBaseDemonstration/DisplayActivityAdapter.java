@@ -35,9 +35,10 @@ public class DisplayActivityAdapter extends RecyclerView.Adapter<DisplayActivity
 
         public ViewHolder(View v) {
             super(v);
-            tvDetails = (TextView) v.findViewById(R.id.tvDetails);
-            tvUserName = (TextView) v.findViewById(R.id.tvUserName);
+            //tvDetails = (TextView) v.findViewById(R.id.tvDetails);
+            //tvUserName = (TextView) v.findViewById(R.id.tvUserName);
             mImageView = (ImageView) v.findViewById(R.id.ivFoodPicture);
+            mImageView.setRotation(90);
         }
     }
 
@@ -66,7 +67,7 @@ public class DisplayActivityAdapter extends RecyclerView.Adapter<DisplayActivity
         // - replace the contents of the view with that element
         String url = mDataset.get(position).toString();
         Log.d("displaying", url);
-        holder.tvDetails.setText(url);
+        //holder.tvDetails.setText(url);
         Picasso.with(context).load(url).resize(150,150).centerCrop().into(holder.mImageView);
     }
 

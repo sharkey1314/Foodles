@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/card"
+    android:layout_width="150dp"
+    android:layout_height="150dp"
+    card_view:cardBackgroundColor="@color/colorPrimary"
+    card_view:cardCornerRadius="4dp"
+    card_view:cardElevation="@dimen/cardview_default_elevation"
+    android:layout_margin="5dp">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tvDetails"
+            android:visibility="invisible"/>
+        <ImageView
+            android:id="@+id/ivFoodPicture"
+            android:visibility="invisible"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_alignParentBottom="true"/>
+        <TextView
+            android:textColor="#FFFFFF"
+            android:id="@+id/tvUserName"
+            android:textSize="18dp"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"
+            android:text="Click here to add a new Restaurant/Stall!"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <!--
+            android:layout_alignEnd="@+id/tvDetails"
+            android:layout_below="@+id/tvUserName"-->
+    </RelativeLayout>
+</android.support.v7.widget.CardView>

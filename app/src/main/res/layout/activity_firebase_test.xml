@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.example.sharkey.foodles.FireBaseDemonstration.FirebaseTestActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="45dp"
+        android:text="profileName:"
+        android:id="@+id/tvProfileName"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="45dp"
+        android:text="facebookID"
+        android:id="@+id/tvFacebookID"
+        android:layout_below="@+id/tvProfileName"
+        android:layout_alignParentStart="true"
+        android:layout_alignEnd="@+id/tvProviderId" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="45dp"
+        android:id="@+id/tvUid"
+        android:layout_below="@+id/tvFacebookID"
+        android:layout_alignParentStart="true"
+        android:text="tvUid"
+        android:layout_alignEnd="@+id/tvFacebookID" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="45dp"
+        android:text="tvProviderID"
+        android:id="@+id/tvProviderId"
+        android:layout_below="@+id/tvUid"
+        android:layout_alignParentStart="true"
+        android:layout_alignEnd="@+id/tvProfilePicURL" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="45dp"
+        android:text="tvProfilePicURL"
+        android:id="@+id/tvProfilePicURL"
+        android:layout_below="@+id/tvProviderId"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="45dp"
+        android:text="tvEmail"
+        android:id="@+id/tvEmail"
+        android:layout_below="@+id/tvProfilePicURL"
+        android:layout_alignEnd="@+id/tvProfilePicURL"
+        android:layout_alignParentStart="true" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/ivProfilePic"
+        android:layout_below="@+id/tvEmail" />
+</RelativeLayout>

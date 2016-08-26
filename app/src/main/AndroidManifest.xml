@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.sharkey.foodles">
+    package="com.example.sharkey.foodles" >
 
     <uses-permission android:name="android.permission.INTERNET" />
 
@@ -11,26 +11,32 @@
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
 
     <uses-feature android:name="android.hardware.camera2.full" />
+    <uses-feature
+        android:name="android.hardware.camera.front"
+        android:required="false" />
+    <uses-feature
+        android:name="android.hardware.camera.autofocus"
+        android:required="false" />
 
     <uses-permission android:name="android.permission.CAMERA" />
     <!--
          The ACCESS_COARSE/FINE_LOCATION permissions are not required to use
          Google Maps Android API v2, but you must specify either coarse or fine
-         location permissions for the 'MyLocation' functionality. 
+         location permissions for the 'MyLocation' functionality.
     -->
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
 
     <application
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@drawable/broccoli_cheerleader"
         android:label="@string/app_name"
         android:supportsRtl="true"
-        android:theme="@style/MyMaterialTheme">
+        android:theme="@style/AppTheme" >
         <provider
             android:name="android.support.v4.content.FileProvider"
             android:authorities="com.example.android.fileprovider"
             android:exported="false"
-            android:grantUriPermissions="true">
+            android:grantUriPermissions="true" >
             <meta-data
                 android:name="android.support.FILE_PROVIDER_PATHS"
                 android:resource="@xml/file_paths" />
@@ -51,7 +57,7 @@
              Note that the API key is linked to the encryption key used to sign the APK.
              You need a different API key for each encryption key, including the release key that is used to
              sign the APK for publishing.
-             You can define the keys for the debug and release targets in src/debug/ and src/release/. 
+             You can define the keys for the debug and release targets in src/debug/ and src/release/.
         -->
         <meta-data
             android:name="com.google.android.geo.API_KEY"
@@ -61,24 +67,62 @@
             android:name=".MapsActivity"
             android:label="@string/title_activity_maps" />
         <activity android:name=".CameraActivity" />
-        <activity android:name=".FireBaseDemonstration.FireBaseLogin">
+        <activity android:name=".FireBaseDemonstration.FireBaseLogin" />
+        <activity android:name=".FireBaseDemonstration.AddRecommendationActivity" />
+        <activity android:name=".FireBaseDemonstration.uploadActivity" />
+        <activity
+            android:name=".FireBaseDemonstration.RecommendActivity"
+            android:configChanges="orientation|screenSize" />
+        <activity android:name=".FireBaseDemonstration.DisplayActivity" />
+        <activity
+            android:name=".FireBaseDemonstration.HomeActivity"
+            android:label="@string/title_activity_home"
+            android:theme="@style/MyMaterialTheme" />
+        <activity android:name=".Camera2.Camera2Activity" />
+        <activity android:name=".Camera2.DetailsFormActivity" />
+        <activity
+            android:name=".FireBaseDemonstration.LoginSplashActivity"
+            android:theme="@style/SplashTheme" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".FireBaseDemonstration.AddRecommendationActivity" />
-        <activity android:name=".FireBaseDemonstration.uploadActivity" />
         <activity
-            android:name=".FireBaseDemonstration.RecommendActivity"
-            android:configChanges="orientation|screenSize" />
-        <activity android:name=".FireBaseDemonstration.DisplayActivity">
+            android:name=".UI.Activity.MainActivity3"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".UI.Activity.CommentsActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.TransparentActivity" />
+        <activity
+            android:name=".UI.Activity.UserProfileActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.TransparentActivity" />
+        <activity
+            android:name=".UI.Activity.PublishActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme"
+            android:windowSoftInputMode="stateHidden" />
+        <activity android:name=".FireBaseDemonstration.FirebaseTestActivity" />
+        <activity android:name=".UI.Activity.TestRecommendationActivity" />
+        <activity
+            android:name=".UI.Activity.TakePhotoActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.TransparentActivity" />
+        <activity
+            android:name=".UI.Activity.MapActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.TransparentActivity" />
+        <activity
+            android:name=".UI.Activity.RestaurantActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.TransparentActivity" />
+        <activity android:name=".UI.Activity.MapActivity2" />
+        <activity android:name=".UI.Activity.AddLocationActivity" />
+        <activity android:name=".UI.Activity.AddLocationActivity" >
         </activity>
-        <activity
-            android:name=".FireBaseDemonstration.HomeActivity"
-            android:label="@string/title_activity_home"
-            android:theme="@style/MyMaterialTheme"></activity>
     </application>
 
 </manifest>
